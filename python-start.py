@@ -29,13 +29,13 @@ dirty_dozen = [fruits, vegetables]
 
 print(dirty_dozen[0][2])
 
-# def greet(intro, x):
-#     """Prints a greeting with an introduction and a name."""
-#     print(f"{intro}")
-#     print("I\'m")
-#     print(x)
+def greet(intro, x):
+    """Prints a greeting with an introduction and a name."""
+    print(f"{intro}")
+    print("I\'m")
+    print(x)
 
-# greet("Welcome","Ashley")
+greet("Welcome","Ashley")
 
 
 def life_in_weeks(age):
