@@ -4,12 +4,18 @@ direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n").lower
 text = input("Type your message:\n").lower()
 shift = int(input("Type the shift number:\n"))
 
+def caesar(direction, text, shift):
+    if direction == "encode":
+        for i in text.lower():
+            encr_num_pos = alphabet.index(i) + shift
+            encr_num_pos %= len(alphabet)
+            shifted_pos = alphabet[encr_num_pos]
+            print(shifted_pos)
 
-# Here are the TODO requirements:
-# TODO-1: Create a function called 'encrypt()' that takes 'original_text' and 'shift_amount' as 2 inputs.
+    elif direction == "decode":
+        for i in text:
+            forward_pos = alphabet.index(i)
+            backwards_pos = forward_pos - shift
+            print(alphabet[backwards_pos])
 
-# TODO-2: Inside the 'encrypt()' function, shift each letter of the 'original_text' forwards in the alphabet by the shift amount and print the encrypted text.
-
-# TODO-3: Call the 'encrypt()' function and pass in the user inputs. You should be able to test the code and encrypt a message.
-
-# TODO-4: What happens if you try to shift z forwards by 9? Can you fix the code?
+caesar(direction, text, shift)
