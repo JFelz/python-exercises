@@ -12,9 +12,6 @@
       
 # format_name(f_name=first_name, l_name=last_name)
 
-
-# TODO: Write out the other 3 functions - subtract, multiply, and divide.
-
 def add(n1, n2):
     return n1 + n2
 
@@ -34,7 +31,7 @@ operations = {
     "/": divide
 }
 
-# TODO: Use the dictionary operations to perform the calculations. Multiply 4 * 8 using the dictionary.
+# Use the dictionary operations to perform the calculations. Multiply 4 * 8 using the dictionary.
 
 print(operations["*"](4, 8))
 
