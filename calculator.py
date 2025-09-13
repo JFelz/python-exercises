@@ -33,16 +33,16 @@ operations = {
 
 print(operations["*"](4, 8))
 
-first_num = int(input("Type in the first number:"))
+first_num = float(input("Type in the first number:"))
 
 while True:
     math_op = input(f"Please type in a mathematical operation: {' '.join(operations)} ")
-    sec_num = int(input("Type in the second number:"))
+    sec_num = float(input("Type in the second number:"))
     result = operations[math_op](first_num, sec_num)
     print(result)
     res = input('Would you like to continue working with the previous result? (Y/n) or "Exit"')
     if res.lower() == "n":
-        first_num = int(input("Type in the first number:"))
+        first_num = float(input("Type in the first number:"))
     elif res.lower() == "exit":
         break
     else:
