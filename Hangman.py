@@ -34,6 +34,7 @@ while not game_over:
 
     if guess not in chosen_word:
         lives -= 1
+        print(f"Current lives left: {lives}")
         if lives == 0:
             game_over = True
             print("You lose!")
