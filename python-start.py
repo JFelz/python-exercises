@@ -1,7 +1,5 @@
 import random
-import random_util
 
-print(random_util.x)
 coin_toss = random.randint(0, 1)
 if coin_toss == 0:
     print("Tails")
@@ -37,8 +35,12 @@ def greet(intro, x):
 
 greet("Welcome","Ashley")
 
+# Global scopes should be all uppercase to avoid modifying code - read but dont modify
+
+GOOGLE_URL = 1234
 
 def life_in_weeks(age):
+    print(GOOGLE_URL)
     print(f"Your current age is: {age}")
     # 52 weeks in 1 year
     weeks_in_age = age * 52
@@ -51,21 +53,6 @@ def life_in_weeks(age):
 
 
 life_in_weeks(39)
-
-
-def life_in_weeks2(age=20):
-    print(f"Your current age is: {age}")
-    # 52 weeks in 1 year
-    weeks_in_age = age * 52
-    weeks_left = 4680 - weeks_in_age
-    print(
-        f"""You have {weeks_left // 52} years left until 90. Make them count!\n
-          You have {weeks_left} weeks left.
-          """
-    )
-
-
-life_in_weeks2(80)
 
 
 def calculate_love_score(name1="Angela Yu", name2="Jack Bauer"):
